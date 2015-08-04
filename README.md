@@ -30,16 +30,15 @@ var logger = new(winston.Logger)({
 ## Options
 * __env__:  the current evironment. Defatuls to `process.env.NODE_ENV`
 
-If `env` is either 'dev' or 'test' the lib will _not_ load the included newrelic module saving devs form anoying arrors ;)
+If `env` is either 'dev' or 'test' the lib will _not_ load the included newrelic module saving devs from anoying errors ;)
 
 ## Config
 Please refer to the [newrelic lib's readme](https://github.com/newrelic/node-newrelic#configuring-the-module) for specific module's configs.
 
 ## Log Levels
-This trasport is meant to report errors to newrelic, so the only level it will make it do something is:
-error
+This trasport is meant to report errors to newrelic, so the only level available in order to log something is **error**
 
-**All other possibile winston's level, or custom levels, will noop**
+**All other possible winston's levels, or custom levels, will noop**
 
 [0]: http://newrelic.com/
 [1]: https://github.com/flatiron/winston

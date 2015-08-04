@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/namshi/node-nmlogger.git"
+    "url": "git+https://github.com/namshi/newrelic-winston.git"
   },
   "keywords": [
     "logging",
@@ -20,9 +20,9 @@
   "author": "Luciano Colosio",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/namshi/node-nmlogger/issues"
+    "url": "https://github.com/namshi/newrelic-winston/issues"
   },
-  "homepage": "https://github.com/namshi/node-nmlogger#readme",
+  "homepage": "https://github.com/namshi/newrelic-winston#readme",
   "dependencies": {
     "lodash": "^3.10.0",
     "newrelic": "^1.21.1",

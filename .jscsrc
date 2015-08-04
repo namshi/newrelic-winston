@@ -1,0 +1,169 @@
+{
+
+  "fileExtensions": [
+    ".js",
+    "jscs"
+  ],
+
+  "requireParenthesesAroundIIFE": true,
+  "maximumLineLength": 120,
+  "validateIndentation": 2,
+  "disallowTrailingComma": true,
+  "requireCommaBeforeLineBreak": true,
+  "disallowYodaConditions" : true,
+  "disallowSpacesInsideObjectBrackets": null,
+  "safeContextKeyword": "self",
+  "disallowEmptyBlocks": true,
+  "disallowMixedSpacesAndTabs": true,
+  "disallowMultipleLineBreaks": true,
+  "disallowMultipleSpaces": true,
+  "disallowNewlineBeforeBlockStatements": true,
+  "disallowSpaceAfterObjectKeys": true,
+  "disallowSpacesInCallExpression": true,
+  "disallowTrailingWhitespace": true,
+  "requireBlocksOnNewline": true,
+  "requireCamelCaseOrUpperCaseIdentifiers": "ignoreProperties",
+  "requireCapitalizedComments": true,
+  "requireCapitalizedConstructors": true,
+  "requireLineBreakAfterVariableAssignment": true,
+  "requireLineFeedAtFileEnd": true,
+  "requireSemicolons": true,
+  "requireSpaceBeforeBlockStatements": true,
+  "requireSpaceBeforeObjectValues": true,
+  "requireSpaceBetweenArguments": true,
+  "requireSpacesInForStatement": true,
+  "validateQuoteMarks": "'",
+
+
+  //"disallowPaddingNewlinesInBlocks": true,
+  
+  "requireCurlyBraces": [
+    "if",
+    "else",
+    "for",
+    "while",
+    "do",
+    "try",
+    "catch",
+    "case"
+  ],
+
+  "requireSpaceAfterBinaryOperators": [
+    "=",
+    ",",
+    "+",
+    "-",
+    "/",
+    "*",
+    "==",
+    "===",
+    "!=",
+    "!=="
+  ],
+
+  "requireSpaceBeforeBinaryOperators": [
+    "=",
+    "+",
+    "-",
+    "/",
+    "*",
+    "==",
+    "===",
+    "!=",
+    "!=="
+  ],
+
+  "disallowSpaceAfterPrefixUnaryOperators": [
+    "++",
+    "--",
+    "+",
+    "-",
+    "~",
+    "!"
+  ],
+
+  "disallowSpacesInAnonymousFunctionExpression": {
+    "beforeOpeningRoundBrace": true
+  },
+
+  "disallowSpacesInFunctionDeclaration": {
+    "beforeOpeningRoundBrace": true
+  },
+
+  "disallowSpacesInFunctionExpression": {
+    "beforeOpeningRoundBrace": true
+  },
+
+  "disallowSpacesInFunction": {
+    "beforeOpeningRoundBrace": true
+  },
+
+  "disallowSpacesInNamedFunctionExpression": {
+    "beforeOpeningRoundBrace": true
+  },
+
+  "requireSpacesInAnonymousFunctionExpression": {
+    "beforeOpeningCurlyBrace": true
+  },
+
+  "requireSpacesInFunctionDeclaration": {
+    "beforeOpeningCurlyBrace": true
+  },
+
+  "requireSpacesInFunctionExpression": {
+    "beforeOpeningCurlyBrace": true
+  },
+
+  "requireSpacesInFunction": {
+    "beforeOpeningCurlyBrace": true
+  },
+
+  "requireSpacesInNamedFunctionExpression": {
+    "beforeOpeningCurlyBrace": true
+  },
+
+  "disallowSpaceBeforeBinaryOperators": [
+    ","
+  ],
+
+  "disallowSpaceBeforePostfixUnaryOperators": [
+    "++",
+    "--"
+  ],
+
+  "disallowOperatorBeforeLineBreak": [
+    "+",
+    "."
+  ],
+
+  "disallowKeywordsOnNewLine": [
+    "else"
+  ],
+
+  "requireSpaceBeforeKeywords" : [
+    "else", 
+    "while",
+    "catch"
+  ],
+
+  "disallowKeywords": [
+    "with",
+    "class"
+  ],
+
+  "disallowImplicitTypeConversion": [
+    "string"
+  ],
+
+  "excludeFiles": [
+    "node_modules/**",
+    "stats/**"
+  ],
+
+  "requireSpacesInConditionalExpression": {
+    "afterTest": true,
+    "beforeConsequent": true,
+    "afterConsequent": true,
+    "beforeAlternate": true
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "newrelic-winston",
+  "version": "0.0.0",
+  "description": "A newrelic transport for winston",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -b"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/namshi/node-nmlogger.git"
+  },
+  "keywords": [
+    "logging",
+    "sysadmin",
+    "tools",
+    "winston",
+    "newrelic"
+  ],
+  "author": "Luciano Colosio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/namshi/node-nmlogger/issues"
+  },
+  "homepage": "https://github.com/namshi/node-nmlogger#readme",
+  "dependencies": {
+    "lodash": "^3.10.0",
+    "newrelic": "^1.21.1",
+    "winston": "^1.0.1"
+  },
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "mocha": "^2.2.5",
+    "proxyquire": "^1.6.0"
+  }
+}

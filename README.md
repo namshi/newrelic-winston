@@ -1,4 +1,4 @@
-# newrelic-winston [![Build Status](https://secure.travis-ci.org/flite/newrelic-winston.png)](http://travis-ci.org/flite/newrelic-winston)
+# newrelic-winston [![Build Status](https://secure.travis-ci.org/namshi/newrelic-winston.png)](http://travis-ci.org/namshi/newrelic-winston)
 
 A [newrelic][0] transport for [winston][1] including the [newrelic][2] Library
 

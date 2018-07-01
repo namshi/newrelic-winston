@@ -25,7 +25,7 @@
   "homepage": "https://github.com/namshi/newrelic-winston#readme",
   "dependencies": {
     "lodash": "^3.10.0",
-    "newrelic": "^1.21.1",
+    "newrelic": "^2.4.2",
     "winston": "^1.0.1"
   },
   "devDependencies": {

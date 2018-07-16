@@ -1,6 +1,5 @@
-var newrelic = {};
-var _ = require('lodash');
-var excludedEnvs = ['dev', 'test'];
+let newrelic = {};
+const excludedEnvs = ['dev', 'test'];
 
 /**
  * If the newrelic module was included will invoke
@@ -10,14 +9,13 @@ var excludedEnvs = ['dev', 'test'];
  * @return {*}
  */
 function callMethod(methodName) {
-  var args = [];
   if (newrelic[methodName]) {
-    args = [].splice.call(arguments, 1, (arguments.length - 1));
+    const args = [].splice.call(arguments, 1, (arguments.length - 1));
     return newrelic[methodName].apply(newrelic, args);
   }
 }
 
-var nmNewRelic = {
+const nmNewRelic = {
   getBrowserTimingHeader: function() {
     return callMethod('getBrowserTimingHeader');
   },
@@ -26,7 +24,7 @@ var nmNewRelic = {
     callMethod('setTransactionName', name);
   },
 
-  noticeError: function(error, options) {
+  noticeError: function(error, options = {}) {
     options = options || {};
     if (options.transactionName) {
       nmNewRelic.setTransactionName(options.transactionName);
@@ -37,7 +35,7 @@ var nmNewRelic = {
 };
 
 module.exports = function(env) {
-  if (_.isEmpty(newrelic) && !_.contains(excludedEnvs, env)) {
+  if (!Object.keys(newrelic).length && !excludedEnvs.includes(env)) {
     newrelic = require('newrelic');
   }
 

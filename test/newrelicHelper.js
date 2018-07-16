@@ -1,9 +1,9 @@
-var stubs = {
+const stubs = {
   newrelic: require('./stubs/newrelic')
 };
-var expect = require('chai').expect;
-var proxyquire = require('proxyquire');
-var helper = {};
+const expect = require('chai').expect;
+const proxyquire = require('proxyquire');
+let helper = {};
 
 describe('Newrelic Helper', function() {
 

@@ -1,23 +1,40 @@
-var winston = require('winston');
-var util = require('util');
+'use strict';
 
-var Newrelic = module.exports = function(options) {
-  options = options || {};
-  var env = options.env || process.env.NODE_ENV;
-  this.name = 'newrelic-winston';
-  this.level = 'error';
-  this.newrelic = require('./newrelicHelper')(env);
+const winston = require('winston');
+const TransportStream = require('winston-transport');
+const { LEVEL, MESSAGE } = require('triple-beam');
+
+/**
+ * Transport for reporting errors to newrelic.
+ * @type {Newrelic}
+ * @extends {TransportStream}
+ */
+module.exports = class Newrelic extends TransportStream {
+    /**
+     * Constructor function for the Console transport object responsible for
+     * persisting log messages and metadata to a terminal or TTY.
+     * @param {!Object} [options={}] - Options for this instance.
+     */
+    constructor(options = {}) {
+        const env = options.env || process.env.NODE_ENV;
+        super(options);
+        this.newrelic = require('./newrelicHelper')(env);
+        this.name = 'newrelic-winston';
+    }
+
+    /**
+     *
+     * @param {Object} info
+     * @param {function} callback
+     */
+    log(info, callback) {
+        setImmediate(() => this.emit('logged', info));
+
+        if (info[LEVEL] === 'error') {
+            newrelic.noticeError(info[MESSAGE], typeof info.message === 'object' && info.message);
+        }
+
+
+        callback();
+    }
 };
-
-util.inherits(Newrelic, winston.Transport);
-winston.transports.newrelic = Newrelic;
-
-Newrelic.prototype.log = function(level, msg, meta, callback) {
-  if (level === 'error') {
-    this.newrelic.noticeError(msg, meta);
-  }
-
-  callback(null, true);
-};
-
-module.exports = Newrelic;

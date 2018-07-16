@@ -1,6 +1,6 @@
 {
   "name": "newrelic-winston",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A newrelic transport for winston",
   "main": "index.js",
   "scripts": {
@@ -24,13 +24,13 @@
   },
   "homepage": "https://github.com/namshi/newrelic-winston#readme",
   "dependencies": {
-    "lodash": "^3.10.0",
-    "newrelic": "^2.4.2",
-    "winston": "^1.0.1"
+    "newrelic": "^4.4.0",
+    "winston": "^3.0.0",
+    "winston-transport": "^4.2.0"
   },
   "devDependencies": {
-    "chai": "^3.2.0",
-    "mocha": "^2.2.5",
-    "proxyquire": "^1.6.0"
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "proxyquire": "^2.0.1"
   }
 }

@@ -2,7 +2,7 @@ const stubs = {
   './newrelicHelper': require('./stubs/newrelicHelper')
 };
 
-const winston = require('winston');
+const { createLogger } = require('winston');
 const proxyquire = require('proxyquire');
 const NewrelicWinston = proxyquire.noCallThru().load('../index.js', stubs);
 const expect = require('chai').expect;
@@ -22,14 +22,20 @@ describe('newrelic-winston', function() {
     });
 
     it('can be registered as winston transport using the add() function', function() {
-        const logger = winston.createLogger({
-        exitOnError: false,
+      const logger = createLogger({
         transports: []
       });
 
       logger.add(new NewrelicWinston());
 
       return expect(logger.transports.map(i=>i.name)).to.include('newrelic-winston');
+    });
+
+    it('winston.log function should not throw any errors', function() {
+        const logger = createLogger({
+            transports: [new NewrelicWinston()],
+        });
+        expect(() => logger.error('foo')).to.not.throw(Error);
     });
 
   });

@@ -31,9 +31,8 @@ module.exports = class Newrelic extends TransportStream {
         setImmediate(() => this.emit('logged', info));
 
         if (info[LEVEL] === 'error') {
-            newrelic.noticeError(info[MESSAGE], typeof info.message === 'object' && info.message);
+            this.newrelic.noticeError(info[MESSAGE], typeof info.message === 'object' && info.message);
         }
-
 
         callback();
     }

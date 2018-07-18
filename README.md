@@ -4,7 +4,7 @@ A [newrelic][0] transport for [winston][1] including the [newrelic][2] Library
 
 ## Installation
 
-Tested on node-0.12.x, requires npm.
+Tested on node-6.x, requires npm.
 
 ``` sh
   $ npm install winston --save
@@ -13,19 +13,22 @@ Tested on node-0.12.x, requires npm.
 
 ## Usage
 ```javascript
-  var winston = require('winston');
-  winston.add(require('newrelic-winston'), options);
+const winston = require('winston');
+const NewrelicWinston = require('newrelic-winston');
+winston.add(new NewrelicWinston(options));
 
 ```
 
 or
 
 ```javascript
-var NewrelicWinston = require('newrelic-winston');
-var logger = new(winston.Logger)({
-        exitOnError: false,
-        transports: [new(NewrelicWinston)(options)]
-      });
+const { createLogger } = require('winston');
+const NewrelicWinston = require('newrelic-winston');
+const logger = createLogger({
+    transports: [
+        new NewrelicWinston(options),
+    ],
+});
 ```
 ## Options
 * __env__:  the current evironment. Defatuls to `process.env.NODE_ENV`

@@ -1,6 +1,6 @@
 {
   "name": "newrelic-winston",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "description": "A newrelic transport for winston",
   "main": "index.js",
   "scripts": {
